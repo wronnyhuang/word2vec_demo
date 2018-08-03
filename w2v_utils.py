@@ -105,7 +105,7 @@ def read_glove_vecs(glove_file):
         
         for line in f:
             print(line)
-#             line = line.strip().split()
+            line = line.strip().split()
             print(line)
 #             curr_word = line[0]
 #             words.add(curr_word)
