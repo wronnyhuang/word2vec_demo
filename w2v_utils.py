@@ -118,10 +118,12 @@ def read_glove_vecs_debug(glove_file):
         
         for line in f:
             print(line)
-#             line = line.strip().split()
+            line = line.strip().split()
             print(line)
-#             curr_word = line[0]
+            curr_word = line[0]
+            print(curr_word)
 #             words.add(curr_word)
+            print(words)
 #             word_to_vec_map[curr_word] = np.array(line[1:], dtype=np.float64)
             
     return words, word_to_vec_map
