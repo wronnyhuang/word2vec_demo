@@ -113,7 +113,6 @@ def read_glove_vecs(glove_file):
             word_to_vec_map[curr_word] = np.array(line[1:], dtype=np.float64)
             
     return words, word_to_vec_map
-    return words, word_to_vec_map
 
 def relu(x):
     """
