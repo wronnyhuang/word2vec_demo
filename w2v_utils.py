@@ -105,7 +105,7 @@ def read_glove_vecs(glove_file):
         
         for line in f:
             if '\xa0' in line:
-                print('Ignored: '+line)
+                print('Ignored: '+line[:25])
                 continue
             line = line.strip().split()
             curr_word = line[0]
