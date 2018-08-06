@@ -104,28 +104,15 @@ def read_glove_vecs(glove_file):
         word_to_vec_map = {}
         
         for line in f:
+            if '\xa0' in line:
+                print('Ignored: '+line)
+                continue
             line = line.strip().split()
             curr_word = line[0]
             words.add(curr_word)
             word_to_vec_map[curr_word] = np.array(line[1:], dtype=np.float64)
             
     return words, word_to_vec_map
-
-def read_glove_vecs_debug(glove_file):
-    with open(glove_file, 'r') as f:
-        words = set()
-        word_to_vec_map = {}
-        
-        for line in f:
-            print(line)
-            line = line.strip().split()
-            print(line)
-            curr_word = line[0]
-            print(curr_word)
-#             words.add(curr_word)
-            print(words)
-#             word_to_vec_map[curr_word] = np.array(line[1:], dtype=np.float64)
-            
     return words, word_to_vec_map
 
 def relu(x):
